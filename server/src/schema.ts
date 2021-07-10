@@ -1,6 +1,6 @@
-const { gql } = require("apollo-server");
+import { gql } from "apollo-server";
 
-const typeDefs = gql`
+export const typeDefs = gql`
   type Query {
     "Get a list of available characters"
     characters: [Character!]!
@@ -43,5 +43,3 @@ const typeDefs = gql`
     droids: [String]
   }
 `;
-
-module.exports = typeDefs;

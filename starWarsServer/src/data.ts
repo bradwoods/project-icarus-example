@@ -1,4 +1,6 @@
-const characters = {
+import { Characters, Droids } from "./types";
+
+const characters: Characters = {
   c_0: {
     name: "Luke Skywalker",
     sideOfTheForce: "light",
@@ -16,7 +18,7 @@ const characters = {
   },
 };
 
-const droids = {
+const droids: Droids = {
   d_0: {
     name: "R2-D2",
     function: "Astromech",
@@ -31,9 +33,7 @@ const droids = {
   },
 };
 
-const data = {
+export const data = {
   characters,
   droids,
 };
-
-module.exports = data;

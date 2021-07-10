@@ -1,17 +1,18 @@
-const express = require("express");
-const data = require("./data");
+import express, { Request, Response } from "express";
+import { data } from "./data";
+
 const app = express();
 const PORT = 7000;
 
 app.use(express.json());
 
-app.get("/characters", (req, res) => {
+app.get("/characters", (_, res: Response) => {
   const charactersList = Object.keys(data.characters).map((id) => ({ ...data.characters[id], id }));
 
   res.send(charactersList);
 });
 
-app.get("/character/:id", (req, res) => {
+app.get("/character/:id", (req: Request, res: Response) => {
   const { id } = req.params;
   const character = data.characters[id];
 
@@ -22,7 +23,7 @@ app.get("/character/:id", (req, res) => {
   res.send({ ...character, id });
 });
 
-app.get("/character/:id/droids", (req, res) => {
+app.get("/character/:id/droids", (req: Request, res: Response) => {
   const { id } = req.params;
   const character = data.characters[id];
 
@@ -31,12 +32,12 @@ app.get("/character/:id/droids", (req, res) => {
   }
 
   const droidIds = character.droids;
-  const droids = droidIds.map((droidId) => ({ ...data.droids[droidId], id: droidId }));
+  const droids = droidIds.map((droidId: string) => ({ ...data.droids[droidId], id: droidId }));
 
   res.send(droids);
 });
 
-app.post("/character/:id", (req, res) => {
+app.post("/character/:id", (req: Request, res: Response) => {
   const { id } = req.params;
   const { body } = req;
   const character = data.characters[id];
@@ -54,7 +55,7 @@ app.post("/character/:id", (req, res) => {
   res.send(data.characters[id]);
 });
 
-app.get("/droid/:id", (req, res) => {
+app.get("/droid/:id", (req: Request, res: Response) => {
   const { id } = req.params;
   const droid = data.droids[id];
 

@@ -1,6 +1,8 @@
-# Apollo GraphQL Space
+# project: Icarus
 
-A learning resource for [Apollo GraphQL](https://www.apollographql.com/).
+A learning resource for Apollo GraphQL. 
+
+[more info](https://icarus.bradwoods.io)
 
 ## To start:
 

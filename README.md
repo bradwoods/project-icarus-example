@@ -1,4 +1,4 @@
-# project: Icarus
+# project: Icarus - example
 
 A learning resource for Apollo GraphQL. 
 

@@ -11,6 +11,7 @@ import { CharacterInput } from "./../../__generated__/globalTypes";
 
 export interface UpdateCharacter_updateCharacter {
   __typename: "Character";
+  id: string;
   /**
    * Which side of the Force character is aligned with (light or dark)
    */

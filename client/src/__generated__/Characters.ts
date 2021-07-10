@@ -14,10 +14,6 @@ export interface Characters_characters {
    * Character's first and last name
    */
   name: string;
-  /**
-   * Which side of the Force character is aligned with (light or dark)
-   */
-  sideOfTheForce: string;
 }
 
 export interface Characters {
